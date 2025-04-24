@@ -1,0 +1,38 @@
+{
+  "name": "vineyard-api",
+  "version": "1.0.0",
+  "description": "REST API for My Wine Rack",
+  "license": "UNLICENSED",
+  "author": "Kev Bittner <kev@mywinerack.co>",
+  "type": "module",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teardroponfire/vineyard-api.git"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-oauth2-jwt-bearer": "^1.6.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.12.1",
+    "nanoid": "^5.1.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.27.0",
+    "@babel/core": "^7.26.9",
+    "@babel/node": "^7.26.0",
+    "@babel/preset-env": "^7.26.9",
+    "nodemon": "^3.1.9"
+  },
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf ./build",
+    "build": "npm run clean && babel ./src --out-dir ./build",
+    "start": "node ./build/index.js"
+  }
+}
