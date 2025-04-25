@@ -14,7 +14,6 @@ const PORT = process.env.PORT || '3601';
 app
   .use(cors())
   .use(bodyParser.json())
-  .use(checkAuthentication)
   .use('/users', users)
   .use('/collections', collections);
 
